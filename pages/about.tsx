@@ -31,13 +31,13 @@ const Work: NextPage = () => {
               <LottieAnimation size={400} animation={EarthAnimation} />
               <Flex direction="column">
                 <SocialLink
-                  href="https://www.linkedin.com/in/kevin-nemec-6699ab126/"
+                  href="https://github.com/Neshoz"
                   leftIcon={<IoLogoGithub size={ICON_SIZE} />}
                 >
                   {"@Neshoz"}
                 </SocialLink>
                 <SocialLink
-                  href="https://github.com/Neshoz"
+                  href="https://www.linkedin.com/in/kevin-nemec-6699ab126/"
                   leftIcon={<IoLogoLinkedin size={ICON_SIZE} />}
                 >
                   {"@Kevin Nemec"}
