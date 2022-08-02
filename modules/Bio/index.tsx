@@ -1,5 +1,5 @@
 import { Box, Button, Heading, Link, Text } from "@chakra-ui/react";
-import { ReactifluxIcon } from "../Icon";
+import { ReactifluxIcon } from "../../components/Icon";
 
 const textStyles = {
   fontSize: 18,
@@ -14,10 +14,12 @@ export const Bio = () => (
       About Kevin
     </Heading>
     <Text {...textStyles}>
-      Kevin Nemec is a software engineer, with experience architecting large and
-      complex webapps and mentoring junior developers. His traits of curiosity,
-      attention to detail and putting high demands on himself and his work,
-      inform his mindful but competitive approach.
+      Kevin Nemec is a software engineer, with over 10 years of experience
+      writing code - 6 of them working professionally in the industry. During
+      this time, Kevin has architected large and complex webapps and mentored
+      junior developers. His traits of curiosity, attention to detail and
+      putting high demands on himself and his work, inform his mindful but
+      competitive approach.
     </Text>
     <br />
     <Text {...textStyles}>

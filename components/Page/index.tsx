@@ -22,7 +22,7 @@ export const Page = ({ children, title }: PageProps) => {
       exit="exit"
       variants={variants}
       transition={{ duration: 0.25, type: "easeInOut" }}
-      style={{ position: "relative", height: "100%" }}
+      style={{ position: "relative", height: "calc(100% - 60px)" }}
     >
       <>
         <Head>

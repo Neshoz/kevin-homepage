@@ -27,12 +27,16 @@ export const LottieAnimation = ({
 
   return (
     <Lottie
-      style={{ padding: 0, margin: 0, cursor: "default" }}
+      style={{
+        padding: 0,
+        margin: 0,
+        cursor: "default",
+        width: size,
+        height: size,
+      }}
       isClickToPauseDisabled={true}
       options={options}
       speed={speed}
-      width={size}
-      height={size}
     />
   );
 };
