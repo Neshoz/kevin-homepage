@@ -23,7 +23,7 @@ export const WorkGridItem = ({
       <Box
         as={motion.div}
         h={300}
-        w={350}
+        w={["100%", 350]}
         borderRadius={4}
         bg="blackAlpha.500"
         shadow="lg"
