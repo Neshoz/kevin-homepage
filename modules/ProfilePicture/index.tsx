@@ -1,15 +1,15 @@
 import NextImage from "next/image";
-import { Box, Avatar, Image } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import Me from "../../public/me2.jpg";
 
 interface Props {
-  avatar?: boolean;
+  small?: boolean;
 }
 
-export const ProfilePicture = ({ avatar }: Props) => {
-  if (avatar) {
+export const ProfilePicture = ({ small }: Props) => {
+  if (small) {
     return (
-      <Box width={200} height={200}>
+      <Box width={350} height={350}>
         <Image
           width="100%"
           height="100%"

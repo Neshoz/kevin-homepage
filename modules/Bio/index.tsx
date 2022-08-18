@@ -32,18 +32,18 @@ export const Bio = () => (
     <br />
     <Text {...textStyles} mb={10}>
       Kevin&apos;s hunger for knowledge and attention to detail allowed him to
-      take on responsibility on his first professional project at Handelsbanken.
-      There, he was trusted to engineer an internal tool for viewing
-      transactions details for certain payments. He was later assigned to lead
-      the frontend development of a new internal tool, which would allow
-      personnel to study and trace transactions, and take necessary actions on
-      fraudulent payments.
+      take responsibility on his first professional project at Handelsbanken.
+      There, he was trusted to engineer payments via iDeal in The Netherlands,
+      as well as an admin tool to view details for these payments. He was later
+      assigned to lead the frontend development of a new internal tool, which
+      allows personnel to monitor transactions, investigate fradulent payments,
+      and more.
       <br />
       <br />
       Kevin believes that self discipline, humbleness and constant learning, is
       essential to grow as an engineer. He is practicing his preach through
       participating in competitive e-sports, fitness, and providing help to
-      developers in{" "}
+      developers in
       <Link href={reactiflux}>
         <Button
           variant="ghost"
@@ -52,7 +52,7 @@ export const Bio = () => (
         >
           Reactiflux
         </Button>
-      </Link>{" "}
+      </Link>
       discord server.
     </Text>
   </Box>

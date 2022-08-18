@@ -1,71 +1,40 @@
-import type { NextPage } from 'next';
-import { FaUniversity, FaBaby, FaCode } from 'react-icons/fa';
-import { Box } from '@chakra-ui/react';
-import { LifeEvent } from '../components/LifeEvent';
-import { Timeline, TimelineItem } from '../components/Timeline';
+import type { NextPage } from "next";
+import type { WorkItem } from "../components/WorkGridItem";
+import { Container, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
+import { Page, WorkGridItem } from "../components";
 
-const events = [
+const items: WorkItem[] = [
   {
-    dot: <FaBaby size={22} />,
-    title: 'Hello, world!',
+    id: "transaction-monitoring",
+    thumbnail: require("../public/images/logos/shb-logo.svg"),
+    title: "Transaction Monitoring",
+    description:
+      "Internal tool allowing personnel to monitor payments and take action on fraduluent ones",
   },
   {
-    dot: <FaUniversity size={22} />,
-    title: 'First line of code',
+    id: "publich-dashboard",
+    thumbnail: require("../public/images/logos/sinch-logo2.png"),
+    title: "Public Dashboard",
+    description:
+      "Various products for integrating with different communucation providers",
   },
-  {
-    dot: <FaCode size={20} />,
-    title: 'Handelsbanken',
-    subtitle: 'Frontend Developer',
-    events: [
-      'Public login',
-      'iDeal Direct Payments - NL',
-      'Internal tool - Transaction monitoring'
-    ]
-  },
-  {
-    dot: <FaCode size={20} />,
-    title: 'Sinch',
-  },
-  {
-    dot: <FaCode size={20} />,
-    title: 'Mediatool',
-  },
-  {
-    dot: <FaCode size={20} />,
-    title: 'Sandvik'
-  }
 ];
 
 const Work: NextPage = () => {
   return (
-    <Box
-      display="flex"
-      w="100%"
-      alignItems="center"
-      justifyContent="center"
-      css={{ height: 'calc(100% - 60px)' }}
-    >
-      <Timeline>
-        {events.map((event, index, self) => (
-          <TimelineItem
-            key={index}
-            index={index}
-            dot={event.dot}
-            line={index !== self.length - 1}
-            content={
-              <LifeEvent
-                title={event.title}
-                subtitle={event.subtitle}
-                events={event.events}
-              />
-            }
-          />
-        ))}
-      </Timeline>
-    </Box>
+    <Page title="Work">
+      <Container h="100%" maxW="container.lg" pt={10}>
+        <Flex direction="column" align="center">
+          <Heading>My works</Heading>
+          <SimpleGrid columns={[1, 2]} spacing={12} py={14}>
+            {items.map((item) => (
+              <WorkGridItem key={item.id} item={item} />
+            ))}
+          </SimpleGrid>
+        </Flex>
+      </Container>
+    </Page>
   );
-}
+};
 
 export default Work;
-

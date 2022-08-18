@@ -7,3 +7,4 @@ export * from "./LottieAnimation";
 export * from "./Page";
 export * from "./Split";
 export * from "./Timeline";
+export * from "./WorkGridItem";

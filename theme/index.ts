@@ -58,5 +58,17 @@ const shadows = {
   teal: "0 5px 20px 2px rgba(56,161,105,0.16);",
 };
 
-const theme = extendTheme({ config, styles, components, colors, shadows });
+const fonts = {
+  heading: `'Lato', sans-serif;`,
+  body: `'Lato', sans-serif;`,
+};
+
+const theme = extendTheme({
+  config,
+  styles,
+  components,
+  colors,
+  shadows,
+  fonts,
+});
 export default theme;

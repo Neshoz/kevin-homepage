@@ -6,18 +6,27 @@ import {
   IoMail,
   IoRocket,
 } from "react-icons/io5";
-import { Flex, Link, Button } from "@chakra-ui/react";
+import { Box, Flex, Link, Button, Center } from "@chakra-ui/react";
 import { LottieAnimation, SocialLink } from "../../components";
-import { useIsSmall } from "../../hooks";
 import EarthAnimation from "../../animations/earth.json";
+import { useIsSmall } from "../../hooks";
+import { ProfilePicture } from "../ProfilePicture";
 
 const ICON_SIZE = 18;
 
 export const Connect = () => {
   const isSmall = useIsSmall();
   return (
-    <Flex w="100%" align="center" direction="column">
-      <LottieAnimation size={isSmall ? 250 : 350} animation={EarthAnimation} />
+    <Flex w="100%" align={["flex-start", "center"]} direction="column">
+      <Center w="100%">
+        {isSmall ? (
+          <Box py={6}>
+            <ProfilePicture small />
+          </Box>
+        ) : (
+          <LottieAnimation size={350} animation={EarthAnimation} />
+        )}
+      </Center>
       <Flex direction="column">
         <SocialLink
           href="https://github.com/Neshoz"
