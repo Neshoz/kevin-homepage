@@ -12,11 +12,24 @@ const items: WorkItem[] = [
       "Internal tool allowing personnel to monitor payments and take action on fraduluent ones",
   },
   {
-    id: "publich-dashboard",
+    id: "ideal-payments",
+    thumbnail: require("../public/images/logos/shb-logo.svg"),
+    title: "iDeal Payments (NL)",
+    description: "Direct payments via iDeal in The Netherlands",
+  },
+  {
+    id: "public-dashboard",
     thumbnail: require("../public/images/logos/sinch-logo2.png"),
     title: "Public Dashboard",
     description:
       "Various products for integrating with different communucation providers",
+  },
+  {
+    id: "mediatool",
+    thumbnail: require("../public/images/logos/mediatool-logo-blue.svg"),
+    title: "Lead Frontend Engineer",
+    description: "Lead TypeScript integration and architectual decisions",
+    scale: "scale-down",
   },
 ];
 

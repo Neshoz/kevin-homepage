@@ -1,12 +1,13 @@
-//import NextImage, { StaticImageData } from "next/image";
 import NextImage, { StaticImageData } from "next/future/image";
 import { motion } from "framer-motion";
 import NextLink from "next/link";
 import { Box, Heading, Text } from "@chakra-ui/react";
+import { scaleTransition } from "../../util";
 
 export interface WorkItem {
   id: string;
   thumbnail: StaticImageData;
+  scale?: "cover" | "scale-down";
   title: string;
   description: string;
 }
@@ -16,7 +17,7 @@ interface Props {
 }
 
 export const WorkGridItem = ({
-  item: { id, thumbnail, title, description },
+  item: { id, thumbnail, title, description, scale },
 }: Props) => {
   return (
     <NextLink href={`/works/${id}`}>
@@ -29,10 +30,7 @@ export const WorkGridItem = ({
         shadow="lg"
         role="group"
         overflow="hidden"
-        whileHover={{
-          scale: 1.05,
-          transition: { duration: 0.15, type: "easeInOut" },
-        }}
+        whileHover={scaleTransition}
         _hover={{
           cursor: "pointer",
         }}
@@ -40,7 +38,11 @@ export const WorkGridItem = ({
         <Box h={150} bg="whiteAlpha.800">
           <NextImage
             src={thumbnail}
-            style={{ height: "100%", objectFit: "cover" }}
+            style={{
+              height: "100%",
+              objectFit: scale ?? "cover",
+              width: "100%",
+            }}
           />
         </Box>
         <Box p={3}>
